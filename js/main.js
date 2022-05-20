@@ -19,7 +19,7 @@ const scrollToTop = () => {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
   if (c > 0) {
     window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, c - c / 40);
+    window.scrollTo(0, c - 50);
   }
 };
 let burger = document.querySelector('.menu-burger__wrapper');
@@ -41,7 +41,7 @@ toTop.addEventListener('click', () => {
       { transform: `translateY(0)`},
       { transform: `translateY(-${height}px)`}
     ],
-    {duration: 5000, easing: 'ease-out'})
+    {duration: 2200, easing: 'linear'})
   scrollToTop();
 });
 

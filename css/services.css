@@ -10,6 +10,7 @@
 .presentation-inner {
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 .sites {
   margin-top: -513px;
@@ -132,6 +133,7 @@
   font-size: 30px;
   color: #c4c7cb;
   font-family: "ptsansregular";
+  padding: 0 30px;
 }
 .presentation-btn {
   width: 460px;
@@ -148,6 +150,14 @@
 }
 .presentation-btn:hover {
   box-shadow: 0 0 12px 2px rgba(208,129,54, .5);
+}
+.presentation-btn__mobile {
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 }
 .presentation-img {
   position: absolute;
@@ -471,7 +481,12 @@
 .show-description-stage__item {
   display: flex;
 }
-
+.services-applications {
+  min-height: 1450px;
+}
+.services-applications .applications-img {
+  top: 680px;
+}
 
 
 
@@ -513,6 +528,30 @@
   .presentation__tab {
     font-size: 30px;
   }
+  .presentation__about-body {
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+    height: auto;
+  }
+  .presentation-img {
+    margin-bottom: -39px;
+  }
+  .apps-presentation__about-body {
+    flex-direction: column-reverse;
+  }
+  .apps-presentation__img {
+    max-width: 34%;
+  }
+  .design-presentation__img {
+    max-width: 43%;
+  }
+  .presentation__tabs-wrapper {
+    width: 35%;
+  }
+  .presentation__about {
+    width: 65%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .presentation__tabs-wrapper {
@@ -521,12 +560,14 @@
   .presentation__about {
     width: 60%;
   }
-  .presentation__about-body {
-    flex-direction: column;
-    align-items: center;
+  .presentation__about-header {
+    width: 100%;
   }
-  .presentation-img {
-    margin-bottom: -39px;
+  .presentation-title {
+    font-size: 43px;
+  }
+  .presentation-subtitle {
+    font-size: 22px;
   }
   .apps .presentation__about-body {
     flex-direction: column-reverse;
@@ -547,14 +588,25 @@
     width: 100%;
   }
   .design-presentation-title {
-    padding-left: 0;
+    padding-left: 15px;
   }
   .design-presentation-title::after {
     width: 100%;
     left: 0;
   }
   .design-presentation-subtitle {
-    padding-left: 0;
+    padding-left: 15px;
+  }
+  .how-much {
+    font-size: 160px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .services-applications {
+    min-height: 1600px;
+  }
+  .services-applications .applications-img {
+    top: 63%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -582,6 +634,9 @@
   .presentation-title {
     text-align: left;
   }
+  .design-presentation-title {
+    padding-left: 0;
+  }
   .presentation-subtitle {
     padding-left: 0;
   }
@@ -589,7 +644,10 @@
     width: 100%;
   }
   .apps-description__wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .description-stage__img {
+    width: 30%;
   }
   .description-stage,
   .apps-description .description-item__text {
@@ -630,8 +688,24 @@
   .description-item__text {
     width: 100%;
   }
+  .presentation-btn {
+    display: none;
+  }
+  .presentation-btn__mobile {
+    display: block;
+    z-index: 2;
+  }
+  .design-section {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .services-applications {
+    min-height: 1300px;
+  }
+  .presentation {
+    padding-top: 0;
+  }
   .presentation__about-header {
     width: 100%;
   }
@@ -647,36 +721,69 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    background: transparent;
+  }
+  .presentation__text-wrapper {
+    display: none;
   }
   .presentation-img {
     max-width: 100%;
+    margin-bottom: 0;
   }
   .presentation-text {
     padding: 0 10px;
   }
   .presentation-btn {
     margin-right: 0;
-    width: 360px;
+    width: 250px;
+    height: 60px;
+    font-size: 26px;
+    bottom: -30px;
   }
   .from {
     margin-right: 0;
-    margin-top: 12px;
+    margin-top: 0;
+    font-size: 36px;
   }
   .how-much {
-    font-size: 140px;
+    font-size: 100px;
   }
   .currency {
-    margin-bottom: 20px;
+    margin-bottom: 0;
     margin-left: 10px;
+    font-size: 36px;
   }
   .about-company::before {
     width: 0;
   }
   .about-company__block {
-    line-height: 32px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  .description-stage__text {
+    line-height: 24px;
+  }
+  .description-item__text p {
+    line-height: 24px;
+  }
+  .description-phone__block img {
+    margin-right: 0;
+    width: 15%;
+  }
+  .descritpion-phone__numbers a {
+    font-size: 32px;
+  }
+  .about-company {
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 600px) {
+  .services-applications {
+    min-height: 1175px;
+  }
+  .services-applications .applications-img {
+    top: 71%;
+  }
   .price-block {
     flex-direction: column;
     align-items: center;
@@ -694,18 +801,35 @@
   .description-item__title {
     font-size: 36px;
   }
+  .presentation__tab {
+    font-size: 26px;
+    line-height: 44px;
+  }
+  .how-much {
+    font-size: 60px;
+  }
+  .apps-presentation__tab {
+    margin-bottom: 0;
+  }
+  .tab-stage__item {
+    font-size: 28px;
+  }
+  .description-stage__img {
+    width: 35%;
+  }
+  .description-item__price {
+    margin-top: 0;
+  }
+  .design-section .description-item {
+    margin-bottom: 0;
+  }
+  .design-section {
+    min-height: 740px;
+  }
 }
 @media screen and (max-width: 460px) {
-  .presentation-btn {
-    width: 260px;
-    height: 70px;
-    margin-bottom: -35px;
-  }
   .presentation__tabs-wrapper {
     padding: 50px 15px;
-  }
-  .presentation__tab {
-    font-size: 28px;
   }
   .presentation-text,
   .description-item__text,
@@ -713,27 +837,65 @@
   .about-company__block {
     font-size: 24px;
   }
-  .presentation-img {
-    margin-top: -62px;
-    margin-bottom: -31px;
-  }
   .descritpion-phone__numbers a {
-    font-size: 33px;
-  }
-  .apps .description-item__text p {
-    line-height: 28px;
+    font-size: 26px;
   }
   .tab-stage__item {
     padding-left: 0;
     font-size: 28px;
   }
-  .description-stage__text {
-    line-height: 30px;
-  }
-  .about-company__block {
-    line-height: 28px;
-  }
   .description-img {
     max-width: 100%;
+  }
+  .presentation__tab {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .apps-presentation__tab-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .presentation-info__title {
+    line-height: 32px;
+  }
+  .presentation-title {
+    font-size: 36px;
+  }
+  .presentation-subtitle {
+    font-size: 18px;
+  }
+  .description-item__title {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  .description-item__title::after {
+    bottom: 0;
+  }
+  .description-stage__img {
+    width: 50%;
+    margin-top: 20px;
+  }
+  .presentation-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    bottom: -20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .services-applications {
+    min-height: 980px;
+  }
+  .services-applications .applications-img {
+    top: 76%;
+  }
+  .description-item__title {
+    font-size: 24px;
+  }
+  .presentation__tabs-wrapper {
+    padding: 30px 15px;
+  }
+  .apps-presentation__tab-title {
+    font-size: 28px;
   }
 }

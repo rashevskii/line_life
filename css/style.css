@@ -934,6 +934,7 @@ footer::after {
   flex-direction: column;
   width: 174px;
   z-index: 5;
+  cursor: pointer;
 }
 .to-top__images {
   position: relative;
@@ -952,7 +953,6 @@ footer::after {
   color: #727272;
   font-family: "ptsansregular";
   padding-left: 15px;
-  cursor: pointer;
 }
 .menu-burger__wrapper {
   position: absolute;
@@ -1032,19 +1032,20 @@ footer::after {
 .second-page__main {
   background: url(../img/services-main-bg.jpg) center no-repeat;
   background-size: cover;
-  min-height: 1160px;
-  padding-top: 305px;
+  min-height: 850px;
+  padding-top: 185px;
   position: relative;
   overflow: hidden;
 }
 .second-page__main::after {
   position: absolute;
   content: '';
-  width: 648px;
-  height: 648px;
+  width: 550px;
+  height: 550px;
   background: url(../img/big-moon.png) center no-repeat;
   top: -18%;
   right: -1%;
+  background-size: cover;
 }
 .second-page__main::before {
   position: absolute;
