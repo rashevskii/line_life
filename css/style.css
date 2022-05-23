@@ -1033,7 +1033,7 @@ footer::after {
   background: url(../img/services-main-bg.jpg) center no-repeat;
   background-size: cover;
   min-height: 850px;
-  padding-top: 185px;
+  padding-top: 320px;
   position: relative;
   overflow: hidden;
 }
