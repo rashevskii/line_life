@@ -214,7 +214,7 @@ img {
 }
 .main-block__image {
   position: absolute;
-  left: -114px;
+  left: -220px;
   top: 15%;
   z-index: 3;
 }
@@ -374,7 +374,11 @@ img {
 }
 .portfolio-sites__highlight {
   left: 0;
-  padding-left: 138px;
+}
+.highlight-block__main {
+  display: flex;
+  justify-content: end;
+  padding-right: 175px;
 }
 .portfolio-sites__description-wrapper {
   display: flex;
@@ -1033,7 +1037,7 @@ footer::after {
   background: url(../img/services-main-bg.jpg) center no-repeat;
   background-size: cover;
   min-height: 850px;
-  padding-top: 320px;
+  padding-top: 190px;
   position: relative;
   overflow: hidden;
 }
@@ -1479,6 +1483,10 @@ footer::after {
     height: 100%;
     font-size: 32px;
   }
+  .highlight-block__main {
+    justify-content: start;
+    padding-right: 0;
+  }
   .highlight-number {
     font-size: 120px;
   }
@@ -1697,8 +1705,8 @@ footer::after {
     position: absolute;
     transform: unset;
     left: unset;
-    top: -113px;
-    right: 0;
+    top: -130px;
+    right: -40px;
   }
   .design .services-block__img {
     top: -113px;
@@ -1714,6 +1722,9 @@ footer::after {
   }
   .phone-number {
     font-size: 38px;
+  }
+  .app-planet2 {
+    right: -55px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -1758,6 +1769,11 @@ footer::after {
     align-items: center;
     text-align: center;
   }
+  .highlight-block__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .highlight-number {
     margin-left: 0;
   }
@@ -1800,6 +1816,9 @@ footer::after {
   footer .header-menu {
     margin-bottom: 20px;
     margin-left: 0;
+  }
+  .design-planet {
+    top: -54px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1863,7 +1882,7 @@ footer::after {
   }
   .services-block__img,
   .design .services-block__img {
-    top: -55px;
+    top: -100px;
   }
   .contacts {
     flex-direction: column;
@@ -2063,6 +2082,9 @@ footer::after {
   }
   .astronaut-with-balls {
     width: 15%;
+  }
+  .app-planet2 {
+    right: 0;
   }
 }
 @media screen and (max-width: 650px) {
