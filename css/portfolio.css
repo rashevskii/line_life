@@ -1,3 +1,6 @@
+.main::after {
+  display: none;
+}
 .portfolio-page {
   min-height: 790px;
 }

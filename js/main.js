@@ -1,3 +1,7 @@
+window.onload = () => {
+  const mainImage = document.querySelector('.main-block__image');
+  mainImage.classList.remove('hidden-img');
+}
 new WOW({
   mobile: false,
 }).init();

@@ -60,6 +60,10 @@ img {
   margin: 0 auto;
 }
 
+.hidden-img {
+  opacity: 0;
+}
+
 .accent-text {
   color: #00bada !important;
 }
@@ -93,7 +97,18 @@ img {
 }
 
 .main { 
-  background: url(../img/main-bg.jpg) center center no-repeat;
+  background: url(../img/main-bg.jpg) top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main::after {
+  position: absolute;
+  content: '';
+  width: 550px;
+  height: 550px;
+  background: url(../img/big-moon.png) center no-repeat;
+  top: -25%;
+  left: 0;
   background-size: cover;
 }
 .header {
@@ -561,7 +576,10 @@ img {
   background-size: cover;
   position: relative;
   z-index: 3;
-  min-height: 1800px;
+  min-height: 1250px;
+}
+.applications-container {
+  position: relative;
 }
 .applications-img {
   position: absolute;
@@ -670,7 +688,6 @@ img {
 }
 .clients {
   position: relative;
-  margin-top: -458px;
 }
 .clients::before {
   position: absolute;
@@ -1037,7 +1054,7 @@ footer::after {
   background: url(../img/services-main-bg.jpg) center no-repeat;
   background-size: cover;
   min-height: 850px;
-  padding-top: 190px;
+  padding-top: 320px;
   position: relative;
   overflow: hidden;
 }
@@ -1793,7 +1810,7 @@ footer::after {
     min-height: 1500px;
   }
   .applications-img {
-    top: 63%;
+    top: 337%;
     width: 70%;
   }
   .applications-description {
@@ -1824,6 +1841,9 @@ footer::after {
 @media screen and (max-width: 992px) {
   body p {
     font-size: 28px !important;
+  }
+  .main::after {
+    top: -31%;
   }
   .to-top__text {
     font-size: 14px !important;
@@ -1983,6 +2003,9 @@ footer::after {
   }
 }
 @media screen and (max-width: 768px) {
+  .main::after {
+    top: -46%;
+  }
   .main-block {
     min-height: 1200px;
   }
@@ -2040,7 +2063,7 @@ footer::after {
     min-height: 1300px;
   }
   .applications-img {
-    top: 60%;
+    top: 360%;
   }
   .applications-form {
     width: 90%;
@@ -2113,9 +2136,6 @@ footer::after {
   }
   .services-block {
     width: 90%;
-  }
-  .applications-img {
-    top: 64%;
   }
   .applications-description {
     width: 100%;
@@ -2291,9 +2311,6 @@ footer::after {
   .applications {
     min-height: 1200px;
   }
-  .applications-img {
-    top: 66%;
-  }
   .applications-header::after {
     top: 83px;
   }
@@ -2335,6 +2352,11 @@ footer::after {
   }
 }
 @media screen and (max-width: 500px) {
+  .main::after {
+    width: 300px;
+    height: 300px;
+    top: -31%;
+  }
   .main-block {
     min-height: 1000px;
   }
@@ -2392,7 +2414,7 @@ footer::after {
     min-height: 1090px;
   }
   .applications-img {
-    top: 69%;
+    top: 330%;
   }
   .applications-header {
     font-size: 45px;

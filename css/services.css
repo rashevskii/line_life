@@ -1,3 +1,9 @@
+.main::after {
+  display: none;
+}
+.second-page__main {
+  padding-top: 190px;
+}
 .services-header {
   z-index: 2;
 }
@@ -276,10 +282,19 @@
   padding-left: 50px;
 }
 .design-section .description {
-  background: url(../img/services-design-bg.jpg) top center no-repeat;
+  background: url(../img/services-design-bg.jpg) top center no-repeat,
+              url(../img/shadow.png) top center no-repeat;
   background-size: cover;
   width: 100%;
-  padding-left: 0;
+  position: relative;
+}
+.description-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(1,13,29,.6);
 }
 .description__inner {
   padding-left: 50px;
@@ -606,7 +621,7 @@
     min-height: 1600px;
   }
   .services-applications .applications-img {
-    top: 63%;
+    top: 360%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -776,13 +791,16 @@
   .about-company {
     margin-bottom: 50px;
   }
+  .services-applications .applications-img {
+    top: 385%;
+  }
 }
 @media screen and (max-width: 600px) {
   .services-applications {
     min-height: 1175px;
   }
   .services-applications .applications-img {
-    top: 71%;
+    top: 360%;
   }
   .price-block {
     flex-direction: column;
@@ -887,7 +905,7 @@
     min-height: 980px;
   }
   .services-applications .applications-img {
-    top: 76%;
+    top: 330%;
   }
   .description-item__title {
     font-size: 24px;

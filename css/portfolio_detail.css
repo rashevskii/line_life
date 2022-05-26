@@ -1,3 +1,6 @@
+.main::after {
+  display: none;
+}
 .portfolio-page {
   min-height: 1015px;
 }
@@ -281,8 +284,35 @@
 }
 @media screen and (min-width: 2800px) {
   .work-page__short-desc {
-    width: 50%;
+    width: 57%;
   }  
+  .work-page__description {
+    width: 32%;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .portfolio-section__text-wrap {
+    min-height: 1400px;
+  }  
+  .work-page__wrapper {
+    margin-bottom: -890px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .portfolio-section__text-wrap {
+    min-height: 1700px;
+  }  
+  .work-page__wrapper {
+    margin-bottom: -1150px;
+  }
+}
+@media screen and (min-width: 2900px) {
+  .portfolio-section__text-wrap {
+    min-height: 2100px;
+  }  
+  .work-page__wrapper {
+    margin-bottom: -1345px;
+  }
 }
 @media screen and (max-width: 1850px) {
   .short-desc {
