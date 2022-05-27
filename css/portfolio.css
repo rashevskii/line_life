@@ -79,6 +79,9 @@
   right: 0;
   bottom: -20px;
 }
+.portfolio-title {
+  font-size: 120px;
+}
 .portfolio-block__subtitle {
   display: inline-flex;
   justify-content: flex-end;

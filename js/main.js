@@ -1,23 +1,34 @@
+$(document).ready(function () {
+  $('.work-img__link').magnificPopup({ type: 'image' });
+  $('.work-screen__link').magnificPopup({ type: 'image' });
+});
+
 window.onload = () => {
   const mainImage = document.querySelector('.main-block__image');
-  mainImage.classList.remove('hidden-img');
+  if (mainImage !== null) mainImage.classList.remove('hidden-img');
 }
 new WOW({
   mobile: false,
 }).init();
 ymaps.ready(init);
 function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [53.120751, 50.081059],
-    zoom: 15
-  });
-  myMap.geoObjects
-    .add(new ymaps.Placemark([53.120751, 50.081059], {
-      iconCaption: 'Долотный переулок, 7'
-    }, {
-      preset: 'islands#icon',
-      iconColor: '#0095b6'
-    }))
+  try {
+    var myMap = new ymaps.Map("map", {
+      center: [53.120751, 50.081059],
+      zoom: 15
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  if (typeof myMap !== 'undefined') {
+    myMap.geoObjects
+        .add(new ymaps.Placemark([53.120751, 50.081059], {
+          iconCaption: 'Долотный переулок, 7'
+        }, {
+          preset: 'islands#icon',
+          iconColor: '#0095b6'
+        }))
+  }
 };
 const scrollToTop = () => {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -55,6 +66,8 @@ const allBlocks = document.querySelectorAll('.description-item');
 const allTabs = document.querySelectorAll('.presentation__tab');
 const appStages = document.querySelectorAll('.description-stage__item');
 const appTabs = document.querySelectorAll('.tab-stage__item');
+const appBlock = document.querySelector('.apps-description');
+const descriptionTitle = document.querySelector('.apps-description .description-item__title');
 
 allTabs.forEach(elem => {
   elem.addEventListener('click', () => {
@@ -64,28 +77,29 @@ allTabs.forEach(elem => {
     });
     allBlocks.forEach(block => {
       if (block.classList.contains(elemClass)) {
+        appBlock.classList.remove('show__app-block');
         block.classList.add('show-description-item');
         block.scrollIntoView({ behavior: "smooth" });
       }
     });
-  });
-});
-
-appTabs.forEach(elem => {
-  elem.addEventListener('mouseover', () => {
-    const elemClass = elem.classList[0];
-    const windowWidth = window.screen.width;
-    appStages.forEach(block => {
-      block.classList.remove('show-description-stage__item');
+    appStages.forEach(stage => {
+      stage.classList.remove('show-description-stage__item');
     });
-    appStages.forEach(block => {
-      if (block.classList.contains(elemClass)) {
-        block.classList.add('show-description-stage__item');
-        if (windowWidth <= 992) {
-          block.scrollIntoView({ block: "center", behavior: "smooth" });
-        }
+    appTabs.forEach(tab => {
+      tab.classList.remove('active-tab-stage__item');
+    });
+    appTabs.forEach(tab => {
+      if (tab.classList.contains(elemClass)) {
+        tab.classList.add('active-tab-stage__item');
       }
     });
+    appStages.forEach(stage => {
+      if (stage.classList.contains(elemClass)) {
+        appBlock.classList.add('show__app-block');
+        stage.classList.add('show-description-stage__item');
+        descriptionTitle.scrollIntoView({ behavior: "smooth" });
+      }
+    })
   });
 });
 
@@ -130,6 +144,17 @@ closeModal.addEventListener('click', () => {
 });
 toOrder.forEach(btn => {
   btn.addEventListener('click', () => {
+    let target = $(btn).data('dir');
+    selectProject(target);
+    switch (target) {
+      case 'sites' : $('#sites-radio').prop('checked', true);
+            break;
+      case 'apps' : $('#app-radio').prop('checked', true);
+            break;
+      case 'designs' : $('#design-radio').prop('checked', true);
+            break;
+    }
+
     modal.classList.add('show-modal');
   });
 });
@@ -140,4 +165,16 @@ if (window.screen.width < 768) {
     element.classList.remove('wow');
     element.classList.remove('animate__animated');
   });
+}
+function selectProject(selection){
+  if (selection === 'sites') {
+    sitesChoice.classList.remove('hidden-choice');
+    designChoice.classList.add('hidden-choice');
+  } else if (selection === 'designs') {
+    sitesChoice.classList.add('hidden-choice');
+    designChoice.classList.remove('hidden-choice');
+  } else { //app
+    designChoice.classList.add('hidden-choice');
+    sitesChoice.classList.add('hidden-choice');
+  }
 }

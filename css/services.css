@@ -1,11 +1,9 @@
 .main::after {
   display: none;
 }
-.second-page__main {
-  padding-top: 190px;
-}
 .services-header {
   z-index: 2;
+  font-size: 120px;
 }
 .presentation {
   display: flex;
@@ -19,7 +17,7 @@
   position: relative;
 }
 .sites {
-  margin-top: -513px;
+  margin-top: -212px;
   padding-top: 0;
 } 
 .presentation__tabs-wrapper {
@@ -222,7 +220,6 @@
   font-size: 30px;
   margin-bottom: 18px;
   letter-spacing: 1px;
-  cursor: auto;
 }
 .design-section {
   min-height: 1068px;
@@ -264,7 +261,7 @@
   background: url(../img/services-text-line.png) center no-repeat;
   top: -58%;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 .about-company__block {
   font-size: 36px;
@@ -280,10 +277,10 @@
 }
 .description {
   padding-left: 50px;
+  margin-top: 50px;
 }
 .design-section .description {
-  background: url(../img/services-design-bg.jpg) top center no-repeat,
-              url(../img/shadow.png) top center no-repeat;
+  background: url(../img/services-design-bg.jpg) top center no-repeat;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -294,7 +291,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(1,13,29,.6);
+  background: url(../img/shadow.png) top center  no-repeat, rgba(1,13,29,.7);
 }
 .description__inner {
   padding-left: 50px;
@@ -417,6 +414,7 @@
 }
 .apps-description {
   margin-top: 130px;
+  display: none;
 }
 .apps-description .description-item__title {
   text-align: right;
@@ -462,18 +460,17 @@
   font-size: 36px;
   color: #9ea2a4;
   font-family: "ptsansregular";
-  cursor: pointer;
   border-top: 2px solid #37495b;
   border-bottom: 2px solid transparent;
 }
 .tab-stage__item:last-child {
   border-bottom: 2px solid #37495b;
 }
-.tab-stage__item:hover {
+.active-tab-stage__item {
   border-top-color: #ff9f3b;
   border-bottom-color: #ff9f3b;
 }
-.tab-stage__item:hover+.tab-stage__item {
+.active-tab-stage__item+.tab-stage__item {
   border-top-color: transparent;
 }
 #design-logo-block .description-img,
@@ -502,15 +499,9 @@
 .services-applications .applications-img {
   top: 680px;
 }
-
-
-
-
-
-
-
-
-
+.show__app-block {
+  display: block;
+}
 @media screen and (max-width: 1740px) {
   .presentation-img {
     max-width: 60%;
@@ -775,6 +766,9 @@
     line-height: 26px;
     margin-bottom: 30px;
   }
+  .description {
+    margin-bottom: 30px;
+  }
   .description-stage__text {
     line-height: 24px;
   }
@@ -793,6 +787,9 @@
   }
   .services-applications .applications-img {
     top: 385%;
+  }
+  .tab-stage__item {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -830,7 +827,7 @@
     margin-bottom: 0;
   }
   .tab-stage__item {
-    font-size: 28px;
+    font-size: 24px;
   }
   .description-stage__img {
     width: 35%;
@@ -860,7 +857,7 @@
   }
   .tab-stage__item {
     padding-left: 0;
-    font-size: 28px;
+    font-size: 22px;
   }
   .description-img {
     max-width: 100%;

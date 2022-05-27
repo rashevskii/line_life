@@ -63,7 +63,6 @@ img {
 .hidden-img {
   opacity: 0;
 }
-
 .accent-text {
   color: #00bada !important;
 }
@@ -100,16 +99,6 @@ img {
   background: url(../img/main-bg.jpg) top center no-repeat;
   background-size: cover;
   position: relative;
-}
-.main::after {
-  position: absolute;
-  content: '';
-  width: 550px;
-  height: 550px;
-  background: url(../img/big-moon.png) center no-repeat;
-  top: -25%;
-  left: 0;
-  background-size: cover;
 }
 .header {
   background-color: rgba(1,0,3,.5);
@@ -220,6 +209,16 @@ img {
   min-height: 1400px;
   position: relative;
 }
+.main-block::after {
+  position: absolute;
+  content: '';
+  width: 550px;
+  height: 550px;
+  background: url(../img/big-moon.png) center no-repeat;
+  top: -25%;
+  left: 0;
+  background-size: cover;
+}
 .planet {
   position: absolute;
   top: 11%;
@@ -230,7 +229,7 @@ img {
 .main-block__image {
   position: absolute;
   left: -220px;
-  top: 15%;
+  top: 22%;
   z-index: 3;
 }
 .main-astronaut-phone {
@@ -257,7 +256,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 1115px;
+  width: 1140px;
   text-align: right;
 }
 .main-block__header {
@@ -576,7 +575,7 @@ img {
   background-size: cover;
   position: relative;
   z-index: 3;
-  min-height: 1250px;
+  min-height: 1800px;
 }
 .applications-container {
   position: relative;
@@ -688,6 +687,7 @@ img {
 }
 .clients {
   position: relative;
+  margin-top: -450px;
 }
 .clients::before {
   position: absolute;
@@ -1051,7 +1051,7 @@ footer::after {
   display: none;
 }
 .second-page__main {
-  background: url(../img/services-main-bg.jpg) center no-repeat;
+  background: url(../img/services-main-bg.jpg) right top no-repeat;
   background-size: cover;
   min-height: 850px;
   padding-top: 320px;
@@ -1158,7 +1158,10 @@ footer::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 7px 0;
+  margin: 14px 0;
+}
+.type-field__wrapper {
+  align-items: start;
 }
 .field-wrapper>input,
 .field-wrapper textarea {
@@ -1204,10 +1207,15 @@ footer::after {
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px dotted #adb5bd;
-  margin-right: 0.5em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%; 
+}
+.types .custom-radio+label::before {
+  margin-right: 1em;
+}
+.subtypes .custom-radio+label::before {
+  margin-right: 0.8em;
 }
 .custom-radio+label::after {
   content: '';
@@ -1232,10 +1240,17 @@ footer::after {
   justify-content: space-between;
   height: 80px;
   width: 75%;
+  position: relative;
 }
 .types {
   border-right: 1px dashed #7e7e7e;
   width: 40%;
+}
+.types>div {
+  margin: 4px 0;
+}
+.subtypes-column>div {
+  margin: 4px 0;
 }
 .subtypes {
   display: flex;
@@ -1249,7 +1264,14 @@ footer::after {
   font-family: "ptsansregular";
 }
 .hidden-choice {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  height: 0;
+  transform: translateX(-50%);
+  transition: all 0s;
+  z-index: -5;
 }
 .design-choice {
   width: 60%;
@@ -1327,6 +1349,7 @@ footer::after {
 }
 .tasks-icon__wrapper {
   display: flex;
+  align-items: center;
   margin-top: 15px;
 }
 .tasks-icon__text {
@@ -1370,8 +1393,9 @@ footer::after {
 }
 .modal-text__template {
   display: flex;
+  align-items: center;
   width: 330px;
-  margin: 170px 0 0 82px;
+  margin: 123px 0 0 82px;
 }
 .template-text {
   font-size: 18px;
@@ -1387,7 +1411,7 @@ footer::after {
   font-size: 16px;
   color: #226e8f;
   font-family: "ptsansbold";
-  padding-top: 20px;
+  padding-top: 8px;
 }
 .show-modal {
   display: flex;

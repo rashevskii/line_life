@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ef526c5c-3f6a-4478-977d-4c3144f32f1c&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/magnificPopup.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/portfolio.css">
@@ -123,7 +124,9 @@
       <div class="work-page__short-desc">
         <div class="short-desc">
           <div class="work-img">
-            <img src="/img/work-img.jpg" alt="Наша работа">
+            <a class="work-img__link" href="/img/work-img.jpg">
+              <img src="/img/work-img.jpg" alt="Наша работа">
+            </a>
           </div>
           <div class="key-moments">
             <div class="key-moment">
@@ -167,23 +170,33 @@
     <div class="work-page__screens container">
       <div class="first-column columns">
         <div class="work-screen__item screen-1">
-          <img src="/img/first-layout.jpg" alt="Макет">
+          <a class="work-screen__link" href="/img/first-layout.jpg">
+            <img src="/img/first-layout.jpg" alt="Макет">
+          </a>
         </div>
       </div>
       <div class="second-column columns">
         <div class="work-screen__item screen-2">
-          <img src="/img/second-layout.jpg" alt="Макет">
+          <a class="work-screen__link" href="/img/second-layout.jpg">
+            <img src="/img/second-layout.jpg" alt="Макет">
+          </a>
         </div>
         <div class="work-screen__item screen-3">
-          <img src="/img/third-layout.jpg" alt="Макет">
+          <a class="work-screen__link" href="/img/third-layout.jpg">
+            <img src="/img/third-layout.jpg" alt="Макет">
+          </a>
         </div>
       </div>
       <div class="third-column columns">
         <div class="work-screen__item screen-4">
-          <img src="/img/fourth-layout.jpg" alt="Макет">
+          <a class="work-screen__link" href="/img/fourth-layout.jpg">
+            <img src="/img/fourth-layout.jpg" alt="Макет">
+          </a>
         </div>
         <div class="work-screen__item screen-5">
-          <img src="/img/fifth-layout.jpg" alt="Макет">
+          <a class="work-screen__link" href="/img/fifth-layout.jpg">
+            <img src="/img/fifth-layout.jpg" alt="Макет">
+          </a>
         </div>
       </div>
     </div>
@@ -434,6 +447,7 @@
   </div>
 
   <script src="js/jquery.js"></script>
+  <script src="js/magnificPopup.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
