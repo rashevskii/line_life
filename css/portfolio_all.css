@@ -1,0 +1,131 @@
+.portfolio-section {
+  margin-bottom: 0;
+}
+.section-subheader {
+  font-size: 63px;
+  letter-spacing: 3px;
+  line-height: 48px;
+  color: #eaecee;
+  font-family: "ptsansbold";
+  margin-top: 0;
+}
+.portfolio-sites__section {
+  margin-top: -180px;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 865px;
+  margin: 105px auto 0;
+}
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 65px;
+}
+.portfolio-section__text-wrap {
+  margin-top: -1000px;
+  background: url(../img/services-design-bg.jpg) center no-repeat;
+  min-height: 1800px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 250px;
+  margin-bottom: 0;
+}
+.prev-page,
+.next-page {
+  width: 68px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.prev-page {
+  background: url(../img/icons/arrow-prev-page.png) center no-repeat, #ff9f3b;
+}
+.next-page {
+  background: url(../img/icons/arrow-next-page.png) center no-repeat, #ff9f3b;
+}
+.page a {
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 66px;
+  color: #00bada;
+  font-family: "ptsansregular";
+}
+.page.active a {
+  color: #ff9f3b;
+}
+.blue-text {
+    color: #00b6d5;
+}
+a.active-page {
+  color: #00bada;
+}
+@media screen and (max-width: 992px) {
+  .section-subheader {
+    font-size: 43px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-subheader {
+    font-size: 33px;
+    position: relative;
+    z-index: 3;
+  }
+  .portfolio-title {
+    margin-bottom: 0;
+  }
+  .portfolio-section__text-wrap {
+    min-height: 1335px;
+    padding-bottom: 95px;
+  }
+  .pages {
+    padding: 0 15px;
+  }
+  .page a {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio-page {
+    padding-top: 245px;
+  }
+  .portfolio-title::before {
+    display: none;
+  }
+  .portfolio-title {
+    font-size: 54px;
+  }
+  .section-subheader {
+    font-size: 28px;
+  }
+  .portfolio-sites__section {
+    margin-top: -410px;
+  }
+  .prev-page, .next-page {
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+  }
+  .page a {
+    font-size: 24px;
+  }
+  .pagination {
+    margin: 35px auto 50px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .portfolio-woks__main-img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .portfolio-work__item-img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

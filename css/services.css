@@ -619,6 +619,9 @@
   .presentation-inner {
     flex-direction: column-reverse;
   }
+  .services-header {
+    font-size: 90px;
+  }
   .apps-presentation {
     flex-direction: column;
   }
@@ -708,6 +711,9 @@
 @media screen and (max-width: 768px) {
   .services-applications {
     min-height: 1300px;
+  }
+  .services-header {
+    font-size: 60px;
   }
   .presentation {
     padding-top: 0;

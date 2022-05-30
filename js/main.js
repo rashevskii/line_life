@@ -145,13 +145,15 @@ closeModal.addEventListener('click', () => {
 toOrder.forEach(btn => {
   btn.addEventListener('click', () => {
     let target = $(btn).data('dir');
-    selectProject(target);
+    selectProject(target ? target : 'sites');
     switch (target) {
       case 'sites' : $('#sites-radio').prop('checked', true);
             break;
       case 'apps' : $('#app-radio').prop('checked', true);
             break;
       case 'designs' : $('#design-radio').prop('checked', true);
+            break;
+      default: $('#sites-radio').prop('checked', true);
             break;
     }
 

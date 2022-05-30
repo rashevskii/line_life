@@ -110,7 +110,8 @@
 }
 .portfolio-woks__main-img {
   width: 40%;
-  padding-bottom: 10px;
+  padding: 0 5px 10px;
+  overflow: hidden;
 }
 .portfolio__main-img,
 .portfolio-item__img {
@@ -126,17 +127,9 @@
   padding-left: 10px;
   padding-bottom: 10px;
 }
-.portfolio-works__main-img {
-  width: 788px;
-  height: 677px;
-  overflow: hidden;
-}
-.portfolio-works__row-img:first-child .portfolio-work__item-img {
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-.portfolio-works__row-img:last-child .portfolio-work__item-img {
-  padding-left: 10px;
+.portfolio-work__item-img {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .portfolio-work__link {
   position: relative;
@@ -317,6 +310,9 @@
   .portfolio-section {
     margin-bottom: 60px;
   }
+  .portfolio-title {
+    font-size: 90px;
+  }
   .portfolio-woks__main-img {
     width: 100%;
     padding-bottom: 0;
@@ -344,6 +340,9 @@
 @media screen and (max-width: 768px) {
   .portfolio-work__item-img {
     width: 50%;
+  }
+  .portfolio-title {
+    font-size: 60px;
   }
   .portfolio-work__item-img:nth-child(4) {
     padding-left: 10px;
