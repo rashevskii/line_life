@@ -129,11 +129,13 @@ img {
 }
 .logo-name {
   font-family: 'rupster';
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 42px;
   color: #00bada;
 }
 .logo-text {
-  font-size: 21px;
+  /* font-size: 21px; */
+  font-size: 18px;
   color: #9da0a5;
   font-weight: 400;
   font-family: "ptsansregular";
@@ -150,7 +152,8 @@ img {
 }
 .header-menu__item a {
   text-decoration: none;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 22px;
   color: #838b92;
   font-family: "ptsansbold";
   text-transform: uppercase;
@@ -268,7 +271,8 @@ img {
 }
 .main-block__about {
   width: 780px;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 26px;
   color: #b5b8bb;
   font-family: "ptsansregular";
 }

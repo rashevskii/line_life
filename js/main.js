@@ -61,7 +61,6 @@ toTop.addEventListener('click', () => {
 });
 
 
-// Перенести 
 const allBlocks = document.querySelectorAll('.description-item');
 const allTabs = document.querySelectorAll('.presentation__tab');
 const appStages = document.querySelectorAll('.description-stage__item');
@@ -180,3 +179,33 @@ function selectProject(selection){
     sitesChoice.classList.add('hidden-choice');
   }
 }
+
+//applications-form__btn
+const conactBtn = document.querySelectorAll('.applications-form__btn');
+conactBtn.forEach(elem => {
+    elem.addEventListener('click', () => {
+        let data = {};
+        let inputs = $('.applications-form input');
+        inputs.toArray().forEach(element => {
+            let e = $(element);
+            console.log(e.attr('name') + ' ' + e.val());
+            data[e.attr('name')] = e.val();
+        });
+        data[$('.applications-form textarea').attr('name')] = $('.applications-form textarea').val();
+        console.log(data);
+
+        axios.post('/contact', data)
+            .then(response => {
+                console.log(response.data);
+                alert('Contact sent');
+            })
+            .catch(errors => {
+                let keys = Object.keys(errors.response.data.errors)
+                let msg = "";
+                keys.forEach(key => {
+                    msg += "Field:" + key + ' ' + errors.response.data.errors[key] + "\n";
+                })
+                alert(msg);
+            });
+    })
+});

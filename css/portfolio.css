@@ -104,10 +104,6 @@
   flex-wrap: wrap;
   width: 60%;
 }
-.portfolio-works__all-design .portfolio-work__item-img {
-  padding-left: 0;
-  padding-right: 10px;
-}
 .portfolio-woks__main-img {
   width: 40%;
   padding: 0 5px 10px;
@@ -124,7 +120,6 @@
 }
 .portfolio-work__item-img {
   width: 33.33%;
-  padding-left: 10px;
   padding-bottom: 10px;
 }
 .portfolio-work__item-img {
@@ -315,23 +310,14 @@
   }
   .portfolio-woks__main-img {
     width: 100%;
-    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .portfolio-works__all-img {
     width: 100%;
   }
-  .portfolio-work__item-img:first-child {
-    padding-left: 0;
-  }
-  .portfolio-work__item-img:nth-child(4) {
-    padding-left: 0;
-  }
   .portfolio-works__block {
     flex-direction: column;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(3n),
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(6n) {
-    padding-right: 0;
   }
   .portfolio-section__apps {
     padding-bottom: 400px;
@@ -343,12 +329,6 @@
   }
   .portfolio-title {
     font-size: 60px;
-  }
-  .portfolio-work__item-img:nth-child(4) {
-    padding-left: 10px;
-  }
-  .portfolio-work__item-img:nth-child(2n-1) {
-    padding-left: 0;
   }
   .portfolio-block__header {
     font-size: 45px;
@@ -363,15 +343,6 @@
     padding-right: 0;
     justify-content: space-between;
     width: 100%;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(4n) {
-    padding-left: 0;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(3n) {
-    padding-right: 10px;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(2n) {
-    padding-right: 0;
   }
   .portfolio-section__apps {
     padding-bottom: 300px;
@@ -441,15 +412,6 @@
 @media screen and (max-width: 460px) {
   .portfolio-work__item-img {
     width: 100%;
-    padding-left: 0;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img {
-    padding-right: 0;
-  }
-  .portfolio-works__all-design .portfolio-work__item-img:nth-child(3n) {
-    padding-right: 0;
-  }
-  .portfolio-work__item-img:nth-child(4) {
     padding-left: 0;
   }
   .apps-applications {
