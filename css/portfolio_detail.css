@@ -14,14 +14,10 @@
   width: 922px;
 }
 .portfolio-title {
-  font-size: 120px;
-}
-.portfolio-title::before {
-  top: -125px;
-  right: -100px;
+  font-size: 72px;
 }
 .section-subheader {
-  font-size: 63px;
+  font-size: 43px;
   letter-spacing: 3px;
   line-height: 48px;
   color: #eaecee;
@@ -228,6 +224,15 @@
   flex-direction: column;
   gap: 45px;
 }
+.first-column {
+  max-width: 611px;
+}
+.second-column {
+  max-width: 615px;
+}
+.third-column {
+  max-width: 394px;
+}
 .columns img {
   object-fit: contain;
 }
@@ -267,6 +272,10 @@
 .next-btn::after {
   background: url(../img/icons/arrow-right.png) center no-repeat;
   right: 0;
+}
+.disable-btn {
+  cursor: auto;
+  opacity: 0.4;
 }
 .portfolio-section__text-wrap {
   background: url(../img/services-design-bg.jpg) center no-repeat;
@@ -390,9 +399,6 @@
 @media screen and (max-width: 992px) {
   .portfolio-page {
     min-height: 585px;
-  }
-  .portfolio-page::after {
-    top: -46%;
   }
   .work-page__wrapper {
     margin-top: 0;
@@ -547,7 +553,7 @@
     min-height: 400px;
   }
   .portfolio-page::after {
-    top: -90%;
+    top: -40%;
   }
   .services-header::after {
     width: 100%;

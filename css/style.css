@@ -129,13 +129,11 @@ img {
 }
 .logo-name {
   font-family: 'rupster';
-  /* font-size: 50px; */
-  font-size: 42px;
+  font-size: 38px;
   color: #00bada;
 }
 .logo-text {
-  /* font-size: 21px; */
-  font-size: 18px;
+  font-size: 16px;
   color: #9da0a5;
   font-weight: 400;
   font-family: "ptsansregular";
@@ -152,8 +150,7 @@ img {
 }
 .header-menu__item a {
   text-decoration: none;
-  /* font-size: 24px; */
-  font-size: 22px;
+  font-size: 20px;
   color: #838b92;
   font-family: "ptsansbold";
   text-transform: uppercase;
@@ -1806,6 +1803,10 @@ footer::after {
   .header-menu__item {
     padding: 0 8px;
   }
+  .second-page__main::before,
+  .about-company::before {
+    width: 990px;
+  }
   .planet {
     top: 10%;
     left: 70%;
@@ -1893,6 +1894,11 @@ footer::after {
 @media screen and (max-width: 992px) {
   body p {
     font-size: 28px !important;
+  }
+  .second-page__main::after {
+    width: 350px;
+    height: 350px;
+    top: -12%;
   }
   .main-block::after {
     top: -31%;

@@ -3,7 +3,7 @@
 }
 .services-header {
   z-index: 2;
-  font-size: 120px;
+  font-size: 72px;
 }
 .presentation {
   display: flex;
@@ -96,7 +96,7 @@
   text-transform: uppercase;
 }
 .presentation-title {
-  font-size: 63px;
+  font-size: 53px;
   color: #eaecee;
   font-family: "ptsansbold";
   margin-top: 0;
@@ -631,6 +631,9 @@
   .apps .presentation__about-body {
     z-index: 1;
   }
+  .presentation {
+    padding-bottom: 20px;
+  }
   .presentation__tabs-wrapper {
     width: 100%;
   }
@@ -717,6 +720,10 @@
   }
   .presentation {
     padding-top: 0;
+    padding-bottom: 100px;
+  }
+  .sites {
+    margin-top: -275px;
   }
   .presentation__about-header {
     width: 100%;
